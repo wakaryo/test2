@@ -1,0 +1,82 @@
+@media screen and (min-width: 1000px) {
+    .header__box {
+        display: grid;
+        grid-template-rows: 25px 50px 25px;
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    .header__logo {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        font-size: 48px;
+        padding-left: 10px;
+    }
+
+    .header__logo__font {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .main1__box {
+        background-color: rgb(197, 197, 197);
+        height: 660px;
+        position: relative;
+    }
+    .main1__font1{
+        top:5%;
+        left: 45%;
+        position: absolute;
+        font-size: 32px;
+    }
+    .main1__login-email{
+        position: absolute;
+        top:25%;
+        left:40%;
+        margin: auto;
+    }
+    .main1__login-email__font{
+        width:300px;
+        font-size: 20pt;
+        padding: 5px;
+    }
+    .main1__login-password{
+        position: absolute;
+        top:37%;
+        left:40%;
+        margin: auto;
+    }
+    .main1__login-password__font {
+        width: 300px;
+        font-size: 20pt;
+        padding: 5px;
+    }
+    .main1__login-bottan{
+        position: absolute;
+        top:48%;
+        left:44.5%;
+        font-size: 20px;
+        padding: 5px 40px;
+        color: white;
+        border: solid 2px rgb(70, 64, 248);
+        background-color: rgb(70, 64, 248);
+    }
+    .main1__user-post{
+        position: absolute;
+        top:62%;
+        left:41%;
+        text-align: center;
+        margin: auto;
+        font-size: 14px;
+}
+}
+
+@media screen and (min-width: 1000px) {
+    .fotter__font {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 15px;
+    }
+}

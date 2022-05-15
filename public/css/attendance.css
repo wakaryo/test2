@@ -1,0 +1,108 @@
+@media screen and (min-width: 1000px) {
+    .header__box {
+        display: grid;
+        grid-template-rows: 25px 50px 25px;
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    .header__logo {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        font-size: 48px;
+        padding-left: 10px;
+    }
+
+    .header__logo__font {
+        text-decoration: none;
+        color: black;
+    }
+
+    .header__nav {
+        grid-row: 2/3;
+        grid-column: 3/4;
+        font-size: 24px;
+    }
+
+    .nav__tr {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .tr__font {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .main1__box {
+        display: grid;
+        grid-template-rows: 80px 480px 100px ;
+        grid-template-columns: 1fr 3fr 1fr;
+        background-color: rgb(197, 197, 197);
+        position: relative;
+    }
+    .main1__table1{
+        position: absolute;
+        top:5%;
+        left:40%;
+    }
+    .main1__table1__font{
+        font-size: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .main1__page3:hover,
+    .main1__page3:active {
+        color: white;
+        background-color: blue;
+    }
+
+    .main1__page3 {
+        color: blue;
+        background-color: white;
+        border-color: blue;
+        border-style:solid;
+        text-decoration: none;
+        padding: 10px;
+        font-size: 16px;
+    }
+    .main1__table2 {
+        grid-row: 2/3;
+        grid-column: 2/3;
+    }
+    .main1__table3 {
+        position: absolute;
+        bottom: 5%;
+        left: 30%;
+    }
+    .main1__page{
+        color: blue;
+        background-color: white;
+        text-decoration:none;
+        padding: 5px;
+        padding: 10px;
+        font-size: 16px;
+    }
+    .main1__page:hover,
+    .main1__page:active{
+        color: white;
+        background-color: blue;
+    }
+    .main1__page2 {
+        color: blue;
+        background-color: white;
+        text-decoration: none;
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .fotter__font {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 15px;
+    }
+}
