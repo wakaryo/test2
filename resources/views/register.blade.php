@@ -18,32 +18,33 @@
     </header>
     <main style="margin: 0;" class="main1__box">
         <p class="main1__font1">
-            ロ グ イ ン
+            会 員 登 録
             <!-- ユーザーはログインした人の名前にする -->
         </p>
-        <p class="main1__login-name">
-            <input type="text" name="name01" size="40" maxlength="100" placeholder="名前" class="main1__login-name__font">
-        </p>
-        <p class="main1__login-email">
-            <input type="email" name="email01" size="40" maxlength="100" placeholder="メールアドレス"
-                class="main1__login-email__font">
-        </p>
-        <p class="main1__login-password">
-            <input type="text" name="text01" size="40" maxlength="100" placeholder="パスワード"
-                class="main1__login-password__font">
-        </p>
-        <p class="main1__login-repassword">
-            <input type="text" name="text01" size="40" maxlength="100" placeholder="確認用パスワード"
-                class="main1__login-repassword__font">
-        </p>
-        <p class="main1__login-bottan">
-            ロ グ イ ン
-            <!-- /rest/start -->
-        </p>
+        <form action="register" method="POST">
+            <p class="main1__login-name">
+                <label for="name">名前：</label>
+                <input type="text" name="name" size="40" maxlength="100" class="main1__login-name__font">
+            </p>
+            <p class="main1__login-email">
+                <label for="email">メールアドレス：</label>
+                <input type="email" name="email" size="40" maxlength="100" class="main1__login-email__font">
+            </p>
+            <p class="main1__login-password">
+                <label for="password">パスワード：</label>
+                <input type="text" name="password" size="40" maxlength="100" class="main1__login-password__font">
+            </p>
+            <p class="main1__login-repassword">
+                <label for="remember_token">確認用パスワード：</label>
+                <input type="text" name="remember_token" size="40" maxlength="100"
+                    class="main1__login-repassword__font">
+            </p>
+            <button class="main1__login-bottan"> 会員登録 </button>
+        </form>
         <p class="main1__user-post">
             アカウントをお持ちの方はこちらから
             <!-- /rest/end -->
-            <br><a class="" href="/login">会員登録</a> <!-- /rest/end -->
+            <br><a class="" href="/login">ログイン</a> <!-- /rest/end -->
         </p>
     </main>
     <footer class="fotter__font">
