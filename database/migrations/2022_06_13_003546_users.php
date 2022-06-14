@@ -14,7 +14,7 @@ class Users extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->bigIncrements('id')->primary();
+            $table->bigIncrements('id');
             $table->ipAddress('name', 255);
             $table->ipAddress('email', 255)->unique()->nullable();
             $table->ipAddress('passowrd', 255)->nullable();
@@ -31,7 +31,7 @@ class Users extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::drop('users');
         //
     }
 }

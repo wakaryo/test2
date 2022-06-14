@@ -14,8 +14,9 @@ class Attendances extends Migration
     public function up()
     {
         Schema::create('attendances', function (Blueprint $table) {
-            $table->bigIncrements('id')->primary();
-            $table->id('user_id')->unique();
+            $table->bigIncrements('id');
+            $table->id()->change();
+            //$table->unique('user_id');//
             $table->date('date')->nullable();
             $table->time('start_time')->nullable();
             $table->time('end_time')->nullable();

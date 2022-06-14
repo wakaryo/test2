@@ -14,8 +14,9 @@ class Rests extends Migration
     public function up()
     {
         Schema::create('rests', function (Blueprint $table) {
-            $table->bigIncrements('id')->primary();
+            $table->bigIncrements('id');
             $table->id('attendance_id');
+            $table->dropPrimary(['attendance_id']);
             $table->time('start_time')->nullable();
             $table->time('end_time')->nullable();
             $table->timestamp('created_at')->useCurrent()->nullable();
