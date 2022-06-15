@@ -15,12 +15,17 @@ class Rests extends Migration
     {
         Schema::create('rests', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->id('attendance_id');
-            $table->dropPrimary(['attendance_id']);
+            //$table->id('attendance_id');
+            //$table->dropPrimary(['attendance_id']);
             $table->time('start_time')->nullable();
             $table->time('end_time')->nullable();
             $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();
+        });
+        Schema::table('rests', function (Blueprint $table) {
+            $table->unsignedBigInteger('attendance_id');
+
+            $table->foreign('attendance_id')->references('id')->on('attendances');
         });
     }
 

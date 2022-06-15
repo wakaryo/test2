@@ -16,7 +16,7 @@ class Users extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->ipAddress('name', 255);
-            $table->ipAddress('email', 255)->unique()->nullable();
+            $table->ipAddress('email', 255)->unique();
             $table->ipAddress('passowrd', 255)->nullable();
             $table->char('remember_token', 255)->nullable();
             $table->timestamp('created_at')->useCurrent()->nullable();
