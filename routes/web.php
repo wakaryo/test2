@@ -5,6 +5,7 @@ use App\Http\Controllers\TestController;
 use App\Http\Controllers\getRegisterController;
 use App\Http\Controllers\postRegisterController;
 use App\Http\Middleware\FirstMiddleware;
+use Illuminate\Http\Request;
 
 Route::get('/', [TestController::class, 'index']);
 Route::post('/', [TestController::class, 'post']);
@@ -14,12 +15,12 @@ Route::get('/', [getRegisterController::class, 'register']);
 Route::get('/login', function () {
     return view('login');
 });
-Route::get('/register', function () {
-    return view('register');
-});
+
 Route::get('/attendance/1', function () {
     return view('attendance');
 });
-Route::post('register', [postRegisterController::class, 'create']);
-Route::get('register', [postRegisterController::class, 'add']);
-Route::post('login', [postRegisterController::class, 'index']);
+Route::post('/register', [postRegisterController::class, 'create']);
+Route::get('/register', [postRegisterController::class, 'index']);
+Route::post('/attendance/1', [postRegisterController::class, 'index']);
+Route::post('/register', function (Request $request) {
+});

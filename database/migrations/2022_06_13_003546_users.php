@@ -15,10 +15,10 @@ class Users extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->ipAddress('name', 255);
-            $table->ipAddress('email', 255)->unique();
-            $table->ipAddress('passowrd', 255)->nullable();
-            $table->char('remember_token', 255)->nullable();
+            $table->string('name', 255);
+            $table->string('email', 255)->unique();
+            $table->string('passowrd', 255)->nullable();
+            $table->char('remember_token',)->nullable();
             $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();
         });

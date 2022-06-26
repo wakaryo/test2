@@ -11,6 +11,7 @@
 </head>
 
 <body style="margin: 0;">
+
     <header class="header__box">
         <article class="header__logo">
             <div><a class="header__logo__font" href="/login">Atte</a></div>
@@ -21,7 +22,9 @@
             会 員 登 録
             <!-- ユーザーはログインした人の名前にする -->
         </p>
-        <form action="register" method="POST">
+        <form action="/register" method="post">
+            @csrf
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <p class="main1__login-name">
                 <label for="name">名前：</label>
                 <input type="text" name="name" size="40" maxlength="100" class="main1__login-name__font">
@@ -39,7 +42,8 @@
                 <input type="text" name="remember_token" size="40" maxlength="100"
                     class="main1__login-repassword__font">
             </p>
-            <button class="main1__login-bottan"> 会員登録 </button>
+            <input type="submit" value="会員登録" class="main1__login-bottan">
+
         </form>
         <p class="main1__user-post">
             アカウントをお持ちの方はこちらから
