@@ -17,7 +17,7 @@ class Users extends Migration
             $table->bigIncrements('id');
             $table->string('name', 255);
             $table->string('email', 255)->unique();
-            $table->string('passowrd', 255)->nullable();
+            $table->string('passowrd', 255);
             $table->char('remember_token',)->nullable();
             $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();
