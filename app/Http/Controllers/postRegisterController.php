@@ -15,6 +15,14 @@ class postRegisterController extends Controller
         $items = DB::select('select * from users');
         return view('register', ['$items' => $items]);
     }
+    public function edit(user $article)
+    {
+        // ddd()入れて引数に渡されたArticleクラスのオブジェクトを中身を見る
+        ddd($article);
+        return view('users.edit', compact('user'));
+    }
+
+
 
     public function create(Request $request)
     {
