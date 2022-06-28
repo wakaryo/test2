@@ -18,7 +18,7 @@ class postRegisterController extends Controller
     public function edit(user $article)
     {
         // ddd()入れて引数に渡されたArticleクラスのオブジェクトを中身を見る
-        ddd($article);
+        dd($article);
         return view('users.edit', compact('user'));
     }
 
