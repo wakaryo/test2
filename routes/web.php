@@ -11,6 +11,8 @@ Route::get('/', [TestController::class, 'index']);
 Route::post('/', [TestController::class, 'post']);
 Route::post('/', [postRegisterController::class, 'register']);
 Route::get('/', [getRegisterController::class, 'register']);
+Route::post('/', [postLoginController::class, 'login']);
+Route::get('/', [getLoginController::class, 'login']);
 
 Route::get('/login', function () {
     return view('login');
@@ -22,5 +24,5 @@ Route::get('/attendance/1', function () {
 Route::post('/register', [postRegisterController::class, 'create']);
 Route::get('/register', [postRegisterController::class, 'index']);
 Route::post('/attendance/1', [postRegisterController::class, 'index']);
-Route::post('/register', function (Request $request) {
-});
+Route::post('/login', [postLoginController::class, 'create']);
+

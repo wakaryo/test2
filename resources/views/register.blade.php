@@ -42,7 +42,7 @@
                 <input type="text" name="remember_token" size="40" maxlength="100"
                     class="main1__login-repassword__font">
             </p>
-            <input type="submit" value="会員登録" class="main1__login-bottan">
+            <a href="/login"><input type="submit" value="会員登録" class="main1__login-bottan"></a>
 
         </form>
         <p class="main1__user-post">
